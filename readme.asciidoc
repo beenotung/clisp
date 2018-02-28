@@ -1,0 +1,10 @@
+= clisp
+
+C implementation of Lisp
+
+This is a practise project to implement lisp in plain c.
+I will avoid using non portable library.
+
+== Tutorial
+
+http://www.buildyourownlisp.com/
