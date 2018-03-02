@@ -1,3 +1,8 @@
 #!/bin/bash
 set -e
-stty $(cat .conf)
+if [ -f .conf ]; then
+  stty $(cat .conf)
+  rm .conf
+else
+  reset
+fi

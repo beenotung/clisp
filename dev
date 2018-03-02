@@ -1,5 +1,12 @@
 #!/bin/bash
 set -e
+./uconf
+./conf
 clear
 ./build
-valgrind ./bin/main $@
+if [ "$1" == "" ]; then
+  main="main"
+else
+  main="$1"
+fi
+valgrind ./bin/"$main" $@

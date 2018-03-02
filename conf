@@ -3,4 +3,5 @@ set -e
 if [ ! -f .conf ]; then
   stty -g > .conf
   stty cbreak
+  stty -echo
 fi

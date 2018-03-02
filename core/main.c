@@ -9,15 +9,14 @@ static int input_size = 2048;
 int get_line() {
     input_len = 0;
     for (;;) {
-        input_len++;
-        if (input_len == input_size) {
-            fprintf(stderr, "input buffer overflow\n");
-            return 1;
-        }
-        char c = input[input_len] = getchar();
+        char c = getchar();
         if (c == '\n') {
+            input[input_len] = '\0';
             return 0;
         }
+        input[input_len] = c;
+        input_len++;
+        printf("%c", c);
     }
 }
 
