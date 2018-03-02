@@ -3,8 +3,10 @@
 int main() {
     printf("press ctrl+c to exit.\n");
     for (;;) {
+        int c;
+        printf("> ");
+        scanf("%d", &c);
         printf("=======\n");
-        int c = getchar();
         printf("|");
         switch (c) {
             case 27:
@@ -31,6 +33,7 @@ int main() {
         printf("|\n");
         printf("|-----|\n");
         printf("| %3d |\n", c);
+        printf("=======\n");
     }
     return 0;
 }

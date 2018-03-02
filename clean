@@ -1,0 +1,6 @@
+#!/bin/bash
+set -e
+set -o pipefail
+rm -rf bin
+find -type d -name build -or -name .xmake -or -name xmake.lua | xargs -I {} rm -rf "{}"
+./uconf
