@@ -1,2 +1,7 @@
-main
 .conf
+.idea/
+*.swp
+bin/
+xmake.lua
+char/.gitignore
+core/.gitignore

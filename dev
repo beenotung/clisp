@@ -1,4 +1,5 @@
 #!/bin/bash
 set -e
+clear
 ./build
-valgrind ./main $@
+valgrind ./bin/main $@

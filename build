@@ -1,2 +1,7 @@
 #!/bin/bash
-cc -std=c99 -Wall main.c -o main
+set -e
+set -o pipefail
+mkdir -p bin
+./build-bin char
+./build-bin core
+find -executable -path '*/build/*' -type f -exec cp {} bin/ \;

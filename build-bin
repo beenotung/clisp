@@ -1,0 +1,5 @@
+#!/bin/bash
+set -e
+set -o pipefail
+cd "$1"
+xmake build -y
